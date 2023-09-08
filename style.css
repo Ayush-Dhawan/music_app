@@ -1,0 +1,274 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@1,300&family=Varela+Round&display=swap');
+
+body{
+    background-color: rgb(51, 49, 49);
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.scroller{
+    scrollbar-color: pink lightblue;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.firstsection{
+    display: flex;
+    align-items: center;
+}
+
+#navimg img{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+}
+
+#navbar{
+    height: 80px;
+    width: 100vw;
+    font-family: 'Varela Round', sans-serif;
+
+}
+nav{
+    width: 100%;
+}
+
+.nav ul{
+    display: flex;
+}
+
+.navlist{
+    display: flex;
+    align-items: center ;
+}
+.navlist img{
+    font-weight: bolder;
+    padding: 0 9px;
+    width: 174px;
+}
+#ul_nav{
+    display: flex;
+    background-color: black;
+    align-items: center;
+    height: 80px;
+    /* flex-direction: row-reverse; */
+    /* padding: 20px; */
+}
+
+#ul_nav li{
+    list-style: none;
+    margin: 20px;
+    color: white;
+    
+    padding: 0 12px ;
+}
+
+#ul_nav li a{
+    text-decoration: none;
+    color: white;
+}
+#ul_nav li a:hover{
+    color: greenyellow;
+}
+
+
+
+#sign-in{
+    margin-left: 30vw;
+}
+
+.sign-in{
+    background-color: rgb(51, 50, 50);
+    color: white;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+
+
+.sign-in:hover{
+    background-color: gray;
+    transition: 0.5s;
+}
+.modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    /* visibility: hidden;  */
+    position:relative;
+    z-index: 9999;
+    /* transform: translateY(-600px); */
+}
+
+.hidden{
+    display: none;
+}
+
+.modal-content{
+    padding: 50px;
+    background-color: gray;
+    height: 500px;
+    width: 300px;
+    color: rgb(51, 50, 50);
+    position: absolute;
+}
+
+.blur{
+    filter: blur(20px);
+}
+
+
+.modal-content h2{
+    margin-bottom: 40px;
+}
+
+.submit{
+    margin-top: 50px;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 8px;
+    display: flex;
+    background-color: rgb(51, 50, 50);
+    color: white;
+}
+
+.submit:hover{
+    background-color: gray;
+    transition: 0.3s;
+}
+
+.email-id{
+    padding: 7px;
+    border-radius: 6px;
+    background-color: rgb(51, 50, 50);
+    color: white;
+}
+.password{
+    padding: 7px;
+    border-radius: 6px;
+    background-color: rgb(51, 50, 50);
+    color: white;
+}
+#open-sign-up{
+    font-size: 13px;
+}
+
+.container{
+    min-height: 60vh;
+    font-family: 'Sofia Sans', sans-serif;
+    background-color: rgb(53, 51, 51);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 23px auto;
+    width: 75%;
+    border-radius: 12px;
+    transition: background 1s ease-in;
+    padding: 30px;
+    position: relative;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(https://imgs.search.brave.com/rhsZhzDvRY1C0VY13_y1_kgikoPRC3ZA_d-ypweV8no/rs:fit:1200:900:1/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDI5NDcz/MTUuanBn);
+}
+
+.video-box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.video-box{ 
+    width: 79%;
+}
+
+.video{
+    border: 1px solid black;
+    border-radius: 12px;
+    background-color: black;
+    padding: 80px;
+    margin: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    /* width: 70%; */
+}
+
+.video video{
+    /* margin-top: 50px; */
+    width: 85%;
+    border-radius: 8px;
+}
+
+
+.bottom{
+    height: 130px;
+    font-family: 'Sofia Sans', sans-serif;
+    background-color: black;
+    color: white;
+    bottom: 0;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container h1{
+    font-family: 'Sofia Sans', sans-serif;
+    margin-bottom: 10px;
+}
+.icons{
+    margin-top: 15px;
+    
+}
+.icons i{
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.songs{
+    background-color: rgb(37, 36, 36);
+    width: 50%;
+    display: flex;
+    font-weight: 600;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px;
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+.songs:hover{
+    cursor: pointer;
+}
+.songs img{
+    width: 43px;
+    padding: 10px;
+}
+
+#progressbar{
+    width: 55vw;
+}
+
+.song-info{
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+
+.song-info img{
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+#song-playing{
+    margin-left: 10px;
+}
+
+.active{
+    color: greenyellow;
+}

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background-color:  rgb(41, 39, 39);
+      color: white;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .firstsection {
+      display: flex;
+      align-items: center;
+    }
+
+    #navimg img {
+      height: 40px;
+      width: 40px;
+      display: flex;
+      align-items: center;
+    }
+
+    #navbar {
+      height: 80px;
+      width: 3000px;
+      font-family: "Varela Round", sans-serif;
+    }
+
+    .nav ul {
+      display: flex;
+    }
+
+    .navlist {
+      display: flex;
+      align-items: center;
+    }
+    .navlist img {
+      font-weight: bolder;
+      padding: 0 9px;
+    }
+    #ul_nav {
+      display: flex;
+      background-color: black;
+      align-items: center;
+      /* flex-direction: row-reverse; */
+      /* padding: 20px; */
+    }
+
+    #ul_nav li {
+      list-style: none;
+      margin: 20px;
+      color: white;
+
+      padding: 0 12px;
+    }
+
+    #ul_nav li a {
+      text-decoration: none;
+      color: white;
+    }
+    #ul_nav li a:hover {
+      color: greenyellow;
+    }
+
+    .main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 86vh;
+      width: 100%;
+      background-color: rgb(41, 39, 39);
+    }
+
+    .container {
+      height: 70vh;
+      width: 90vw;
+      background-color: black;
+      margin: auto;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .box {
+      background-color: rgb(61, 58, 58);
+      height: 60vh;
+      width: 40vw;
+      margin: 20px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+       color: rgb(120, 185, 24);  
+    }
+
+    .box:hover{
+        height: 65vh;
+        width: 45vw;
+        transition: 0.4s;
+
+    }
+
+    .box:hover::after{
+        transition: 0.4s ease-out;
+    }
+
+    .price {
+      font-size: 80px;
+    }
+    .month {
+      font-size: large;
+    }
+
+    .features {
+      margin-top: 50px;
+      padding: 50px;
+    }
+
+    .features2 {
+      margin-top: 40px;
+      padding: 50px;
+    }
+    ul li {
+      list-style-type: "✓";
+      padding: 10px;
+     color: greenyellow;
+    }
+
+    .box-content {
+      height: 50vh;
+    }
+    .active{
+      color: greenyellow;
+    }
+  </style>
+  <body>
+    <nav>
+      <ul id="ul_nav">
+        <li
+          class="navlist"
+          id="navimg"
+          style="font-weight: bolder; font-size: 1.3rem"
+        >
+          <img
+            src="https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-simple-green-logo-icon-24.png"
+            alt="MusicApp"
+          />MusicApp
+        </li>
+        <li class="navlist"><a href="index.html">Home</a></li>
+        <li class="navlist"><a href="playlists.html">Playlists</a></li>
+        <li class="navlist"><a href="payment.html"><span class="active">Plan</span></a></li>
+        <li class="navlist"><a href="aboutus.html">About us</a></li>
+      </ul>
+    </nav>
+
+    <div class="main">
+      <div class="container">
+        <div class="box" id="box-1">
+          <div class="box-content">
+            <center>
+              <h5>Standard plan</h5>
+              <span class="price">99₹</span> <br />
+              <span class="month">/month</span>
+
+              <ul class="features">
+                <li>No audio ads between songs</li>
+                <li>Higher audio quality</li>
+                <li>Plan validity: 1 month</li>
+              </ul>
+            </center>
+          </div>
+        </div>
+        <div class="box" id="box-2">
+          <div class="box-content">
+            <center>
+              <h5>Advanced plan</h5>
+              <span class="price">79₹</span> <br />
+              <span class="month">/month</span>
+
+              <ul class="features2">
+                <li>No audio ads between songs</li>
+                <li>Higher audio quality</li>
+                <li>Download and listen offline</li>
+                <li>Plan validity: 1 year</li>
+              </ul>
+            </center>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        const box1 = document.getElementById('box-1');
+         const box2 = document.getElementById('box-2');
+         let click1 = 0;
+         let click2 = 0;
+         const originalContent1 = box1.innerHTML;
+         const originalContent2 = box2.innerHTML;
+
+         box1.addEventListener('click', function(){
+            if(click2 == 1){
+                box2.innerHTML = '';
+                box2.innerHTML = originalContent2;
+                click2 = 0;
+            }
+            if(click1 == 0){
+            box1.innerHTML = '';
+            box1.innerHTML = '<img src="99-qr.png" alt="Image" style="height: 280px; width: 280px">';
+            click1 = 1;
+            }else{
+                box1.innerHTML = '';
+                box1.innerHTML = originalContent1;
+                click1 = 0;
+            }
+         })
+
+          box2.addEventListener('click', function(){
+            if(click1 == 1){
+                box1.innerHTML = '';
+                box1.innerHTML = originalContent1;
+                click1 = 0;
+            }
+            if(click2 == 0){
+            box2.innerHTML = '';
+            box2.innerHTML = '<img src="948-qr.png" alt="Image" style="height: 280px; width: 280px">';
+            click2 = 1;
+            }else{
+                box2.innerHTML = '';
+                box2.innerHTML = originalContent2;
+                click2 = 0;
+            }
+         })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About Us</title>
+    <style>
+      body {
+        background-color: rgb(51, 49, 49);
+        color: white;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .firstsection {
+        display: flex;
+        align-items: center;
+      }
+
+      #navimg img {
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+      }
+
+      #navbar {
+        height: 80px;
+        width: 3000px;
+        font-family: "Varela Round", sans-serif;
+      }
+
+      .nav ul {
+        display: flex;
+      }
+
+      .navlist {
+        display: flex;
+        align-items: center;
+      }
+      .navlist img {
+        font-weight: bolder;
+        padding: 0 9px;
+      }
+      #ul_nav {
+        display: flex;
+        background-color: black;
+        align-items: center;
+        /* flex-direction: row-reverse; */
+        /* padding: 20px; */
+      }
+
+      #ul_nav li {
+        list-style: none;
+        margin: 20px;
+        color: white;
+
+        padding: 0 12px;
+      }
+
+      #ul_nav li a {
+        text-decoration: none;
+        color: white;
+      }
+      #ul_nav li a:hover {
+        color: greenyellow;
+      }
+
+      .team-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 50px;
+        background-color: rgb(51, 49, 49);
+        display: flex;
+      }
+
+      .team-member {
+        width: 20%;
+        padding: 20px;
+        height: 400px;
+        background-color: rgb(56, 55, 55);
+        text-align: center;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+
+      .team-member:hover {
+        transform: translateY(-0.45rem);
+        transition: 0.5s;
+      }
+
+      .the-team {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 65px;
+      }
+
+      .team-member img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+      }
+
+      .email {
+        padding: 20px;
+      }
+      .container {
+        border: 1px solid black;
+        border-radius: 12px;
+        background-color: black;
+        padding: 80px;
+        margin: 40px;
+        height: 400px;
+      }
+
+      .container2 {
+        border: 1px solid black;
+        border-radius: 12px;
+        background-color: black;
+        padding: 20px;
+        margin: 40px;
+        height: 600px;
+      }
+
+      .container3 {
+        border: 1px solid black;
+        border-radius: 12px;
+        background-color: black;
+        padding: 20px;
+        margin: 40px;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #abouttext {
+        padding: 50px;
+      }
+
+      .about-video {
+        height: 80%;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .bottom {
+        height: 130px;
+        font-family: "Sofia Sans", sans-serif;
+        background-color: black;
+        color: white;
+        bottom: 0;
+        position: sticky;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .container h1 {
+        font-family: "Sofia Sans", sans-serif;
+        margin-bottom: 10px;
+      }
+      .icons {
+        margin-top: 15px;
+      }
+      .icons i {
+        margin-left: 10px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+      .songs {
+        background-color: rgb(37, 36, 36);
+        width: 50%;
+        display: flex;
+        font-weight: 600;
+        justify-content: space-between;
+        align-items: center;
+        padding: 7px;
+        border-radius: 7px;
+        margin-bottom: 10px;
+      }
+      .songs:hover {
+        cursor: pointer;
+      }
+      .songs img {
+        width: 43px;
+        padding: 10px;
+      }
+      .song-info img {
+        opacity: 0;
+        transition: opacity 1s ease-in;
+      }
+
+      #progressbar {
+        width: 80vh;
+      }
+
+      .active {
+        color: greenyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul id="ul_nav">
+        <li
+          class="navlist"
+          id="navimg"
+          style="font-weight: bolder; font-size: 1.3rem"
+        >
+          <img
+            src="https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-simple-green-logo-icon-24.png"
+            alt="MusicApp"
+          />MusicApp
+        </li>
+        <li class="navlist"><a href="index.html">Home</a></li>
+        <li class="navlist"><a href="playlists.html">Playlists</a></li>
+        <li class="navlist"><a href="payment.html">Plans</a></li>
+        <li class="navlist">
+          <a href="#"><span class="active">About Us</span></a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- <div class="container3">
+        <div class="about-video"><video src="visualizer.mp4" autoplay loop></video></div>
+    </div> -->
+    <div class="container">
+      <h1>About us</h1>
+      <div id="abouttext">
+        <p style="font-size: 20px; font-family: Monaco">
+          With our music app, you can access millions of songs that are
+          available in the market. We have curated a vast library of music
+          across various genres and artists to cater to every musical taste. Our
+          primary focus is on delivering an exceptional user experience. We
+          understand that music is a personal and immersive experience, and our
+          app is designed to enhance that experience for our users. From
+          seamless navigation to intuitive features, we strive to make the app a
+          joy to use. One of our key goals in creating this music app was to
+          provide a platform that is completely free and doesn't display any
+          advertisements. We believe that music should be accessible to everyone
+          without any interruptions or distractions. That's why our app is
+          ad-free, allowing you to enjoy your favorite songs without any
+          interruptions.
+        </p>
+        <p style="font-size: 20px; font-family: Monaco">
+          We are committed to providing a superior and easy-to-use UI/UX (User
+          Interface/User Experience) to our users. Our design team has worked
+          tirelessly to create a visually appealing and intuitive interface that
+          makes discovering, organizing, and enjoying music a breeze. We want
+          you to have a seamless and delightful experience every time you use
+          our app. At our core, we are music lovers who are passionate about
+          creating a platform that brings people closer to the music they love.
+          We are constantly striving to improve and enhance our app based on
+          user feedback and technological advancements. Your satisfaction is our
+          top priority, and we are dedicated to providing you with the best
+          possible music app experience. Thank you for choosing our app and
+          being a part of our musical journey. We hope you enjoy using it as
+          much as we enjoyed creating it
+        </p>
+      </div>
+    </div>
+    <div class="container2">
+      <div>
+        <h1 class="Our-team" style="margin-left: 45%">Our Team</h1>
+        <div class="the-team">
+          <div class="team-member">
+            <img src="team1.png" alt="Ayush" />
+            <h2>Ayush Dhawan</h2>
+            <p class="title">IOT</p>
+            <p>
+              A passionate app developer with a deep love for music and a strong
+              commitment to creating an exceptional music app experience.
+            </p>
+            <p class="email">dhawanayush416@gmail.com</p>
+          </div>
+
+          <div class="team-member">
+            <img src="team4.png" alt="Krishna" />
+            <h2>Krishna Bhattad</h2>
+            <p class="title">COMP</p>
+            <p>
+              Krishna is a music enthusiast turned developer, channeling their
+              passion and technical expertise to build a music app.
+            </p>
+            <p class="email">krishnabhattad263@gmail.comm</p>
+          </div>
+
+          <div class="team-member">
+            <img src="team3.png" alt="Jash" />
+            <h2>Jash Parmar</h2>
+            <p class="title">COMP</p>
+            <p>
+              With a keen eye for detail and a dedication to user satisfaction,
+              Jash strives to deliver a seamless and intuitive music app,
+              ensuring that every user can access their favorite songs
+              effortlessly.
+            </p>
+            <p class="email">jash2253@gmail.com</p>
+          </div>
+
+          <div class="team-member">
+            <img src="team2.png" alt="Praharsh" />
+            <h2>Praharsh Dubey</h2>
+            <p class="title">CS&E</p>
+            <p>
+              Praharsh believes in the power of music to inspire, connect, and
+              uplift, and is committed to crafting an ad-free music app that
+              puts the user's experience at the forefront, creating a platform
+              where music can be enjoyed to its fullest potential.
+            </p>
+            <p class="email">praharshdubey2003@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/8276e76662.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

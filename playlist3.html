@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music</title>
+    <style>
+        
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@1,300&family=Varela+Round&display=swap');
+
+body{
+    background-color: rgb(51, 49, 49);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.firstsection{
+    display: flex;
+    align-items: center;
+}
+
+#navimg img{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+}
+
+#navbar{
+    height: 80px;
+    width: 3000px;
+    font-family: 'Varela Round', sans-serif;
+
+}
+
+.nav ul{
+    display: flex;
+}
+
+.navlist{
+    display: flex;
+    align-items: center ;
+}
+.navlist img{
+    font-weight: bolder;
+    padding: 0 9px;
+}
+#ul_nav{
+    display: flex;
+    background-color: black;
+    align-items: center;
+    /* flex-direction: row-reverse; */
+    /* padding: 20px; */
+}
+
+#ul_nav li{
+    list-style: none;
+    margin: 20px;
+    color: white;
+    
+    padding: 0 12px ;
+}
+
+#ul_nav li a{
+    text-decoration: none;
+    color: white;
+}
+#ul_nav li a:hover{
+    color: greenyellow;
+}
+
+.container{
+    min-height: 60vh;
+    font-family: 'Sofia Sans', sans-serif;
+    background-color: rgb(53, 51, 51);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 23px auto;
+    width: 70%;
+    border-radius: 12px;
+    padding: 30px;
+    transition: background 1s ease-in;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(onrepeat-background.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bottom{
+    height: 130px;
+    font-family: 'Sofia Sans', sans-serif;
+    background-color: black;
+    color: white;
+    bottom: 0;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container h1{
+    font-family: 'Sofia Sans', sans-serif;
+    margin-bottom: 10px;
+}
+.icons{
+    margin-top: 15px;
+    
+}
+.icons i{
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.song-info img{
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.songs{
+    background-color: rgb(37, 36, 36);
+    width: 50%;
+    display: flex;
+    font-weight: 600;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px;
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+.songs:hover{
+    cursor: pointer;
+}
+.songs img{
+    width: 43px;
+    padding: 10px;
+}
+
+#progressbar{
+    width: 80vh;
+}
+
+.song-info{
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+
+#song-playing{
+    margin-left: 10px;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <ul id="ul_nav">
+            <li class="navlist" id="navimg" style="font-weight: bolder; font-size: 1.3rem;"><img src="https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-simple-green-logo-icon-24.png" alt="MusicApp">MusicApp</li>
+            <li class="navlist"><a href="index.html">Home</a></li>
+            <li class="navlist"><a href="playlists.html">Playlists</a></li>
+            <li class="navlist"><a href="payment.html">Plans</a></li>
+            <li class="navlist"><a href="aboutus.html">About us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>On-repeat</h1>
+        <div class="songlist">
+            <div class="songs">
+                <img src="https://imgs.search.brave.com/mP0dx2TmMyx8nbUm3f-WzakrVSF041f7k28xZQA9QHk/rs:fit:500:499:1/g:ce/aHR0cDovLzQuYnAu/YmxvZ3Nwb3QuY29t/Ly1OOVk3Mk1QUFg4/SS9WZE9UcW41UmNB/SS9BQUFBQUFBQUE0/OC9fNEhwQ0pyS1pa/dy9zMTYwMC90dW1i/bHJfbmY4d3NmTUdJ/bDFybHJiOTdvMV81/MDAucG5n" alt="1">
+                <span class="song-name">Takeaway</span>
+                <span class="songplay">3:29<i class="fa song-item-play fa-play-circle" id="13" aria-hidden="true"></i></span>
+            </div>
+
+            <div class="songs">
+                <img src="https://imgs.search.brave.com/mP0dx2TmMyx8nbUm3f-WzakrVSF041f7k28xZQA9QHk/rs:fit:500:499:1/g:ce/aHR0cDovLzQuYnAu/YmxvZ3Nwb3QuY29t/Ly1OOVk3Mk1QUFg4/SS9WZE9UcW41UmNB/SS9BQUFBQUFBQUE0/OC9fNEhwQ0pyS1pa/dy9zMTYwMC90dW1i/bHJfbmY4d3NmTUdJ/bDFybHJiOTdvMV81/MDAucG5n" alt="1">
+                <span class="song-name">After Hours</span>
+                <span class="songplay">6:02<i class="fa song-item-play fa-play-circle" id="14"aria-hidden="true"></i></span>
+            </div>
+
+            <div class="songs">
+                <img src="https://imgs.search.brave.com/mP0dx2TmMyx8nbUm3f-WzakrVSF041f7k28xZQA9QHk/rs:fit:500:499:1/g:ce/aHR0cDovLzQuYnAu/YmxvZ3Nwb3QuY29t/Ly1OOVk3Mk1QUFg4/SS9WZE9UcW41UmNB/SS9BQUFBQUFBQUE0/OC9fNEhwQ0pyS1pa/dy9zMTYwMC90dW1i/bHJfbmY4d3NmTUdJ/bDFybHJiOTdvMV81/MDAucG5n" alt="1">
+                <span class="song-name">Blinding Lights</span>
+                <span class="songplay">3:23<i class="fa song-item-play fa-play-circle" id="15" aria-hidden="true"></i></span>
+            </div>
+
+            <div class="songs">
+                <img src="https://imgs.search.brave.com/mP0dx2TmMyx8nbUm3f-WzakrVSF041f7k28xZQA9QHk/rs:fit:500:499:1/g:ce/aHR0cDovLzQuYnAu/YmxvZ3Nwb3QuY29t/Ly1OOVk3Mk1QUFg4/SS9WZE9UcW41UmNB/SS9BQUFBQUFBQUE0/OC9fNEhwQ0pyS1pa/dy9zMTYwMC90dW1i/bHJfbmY4d3NmTUdJ/bDFybHJiOTdvMV81/MDAucG5n" alt="1">
+                <span class="song-name">Cest la vie</span>
+                <span class="songplay">3:50<i class="fa song-item-play fa-play-circle" id="16" aria-hidden="true"></i></span>
+            </div>
+
+            <div class="songs">
+                <img src="https://imgs.search.brave.com/mP0dx2TmMyx8nbUm3f-WzakrVSF041f7k28xZQA9QHk/rs:fit:500:499:1/g:ce/aHR0cDovLzQuYnAu/YmxvZ3Nwb3QuY29t/Ly1OOVk3Mk1QUFg4/SS9WZE9UcW41UmNB/SS9BQUFBQUFBQUE0/OC9fNEhwQ0pyS1pa/dy9zMTYwMC90dW1i/bHJfbmY4d3NmTUdJ/bDFybHJiOTdvMV81/MDAucG5n" alt="1">
+                <span class="song-name">Heaven</span>
+                <span class="songplay">3:35<i class="fa song-item-play fa-play-circle" id = "17"aria-hidden="true"></i></span>
+            </div>
+
+            <div class="songs">
+                <img src="https://imgs.search.brave.com/mP0dx2TmMyx8nbUm3f-WzakrVSF041f7k28xZQA9QHk/rs:fit:500:499:1/g:ce/aHR0cDovLzQuYnAu/YmxvZ3Nwb3QuY29t/Ly1OOVk3Mk1QUFg4/SS9WZE9UcW41UmNB/SS9BQUFBQUFBQUE0/OC9fNEhwQ0pyS1pa/dy9zMTYwMC90dW1i/bHJfbmY4d3NmTUdJ/bDFybHJiOTdvMV81/MDAucG5n" alt="1">
+                <span class="song-name">Time of our lives</span>
+                <span class="songplay">3:54<i class="fa song-item-play fa-play-circle" id="18" aria-hidden="true"></i></span>
+            </div>
+        </div>
+        <div class="songbanner"></div>
+    </div>
+
+        <div class="bottom">
+        <input  type="range" name="range" id="progressbar" value = "0" min="0" max="100">
+        <div class="icons">
+            <i class="fa fa-3x fa-step-backward" id="previous"aria-hidden="true"></i>
+            <i class="fa fa-3x fa-play-circle" id="master-play" aria-hidden="true"></i>
+            <i class="fa fa-3x fa-step-forward" id="after" aria-hidden="true"></i>
+
+        </div>
+        <div class="song-info">
+            <img src="audio.gif" alt="gif" id="gif"><span id="song-playing">TakeAway</span>
+        </div>
+    </div>
+
+
+       <script>
+'use strict';
+
+// const alone = new Audio("I_Prevail_-_Alone_CeeNaija.com_.mp3");
+// const deepEnd = new Audio("I_Prevail_-_ Deep_End_CeeNaija.com_.mp3");
+// const anchor = new Audio("Skillet_-_Anchor_CeeNaija.com_.mp3");
+// const youAndI = new Audio('You-And-I(PagalWorld).mp3');
+// const cantForget = new Audio("My_Darkest_Days_-_Can_t_Forget_You_(mp3.pm).mp3");
+// const nightChanges = new Audio("Night-Changes(PaglaSongs)(1).mp3");\
+
+let songIndex = 0;
+let audioElement = new Audio("song13.mp3");
+let masterPlay = document.querySelector('#master-play');
+let progress_bar = document.querySelector('#progressbar');
+let gif = document.querySelector("#gif");
+let songItems = document.querySelectorAll('.song-item-play');
+const prev = document.querySelector('#previous');
+const next = document.querySelector('#after');
+const container = document.querySelector('.container');
+
+let songs = [
+  { songName: "TakeAway", filepath: "song13.mp3", song_index: 0},
+  { songName: "After Hours", filepath: "song14.mp3", song_index: 1},
+  { songName: "Blinding Lights", filepath: "song15.mp3", song_index: 2},
+  { songName: "Cest la vie", filepath: "song16.mp3", song_index: 3},
+  { songName: "Heaven", filepath: "song17.mp3", song_index: 4},
+  { songName: "Time of our lives", filepath: "song18.mp3", song_index: 5},
+];
+
+masterPlay.addEventListener('click', function(element){
+    console.log('click')
+    if(audioElement.paused || audioElement.currentTime <= 0){
+        // let id = Number(element.target.id);
+         audioElement.play();
+         masterPlay.classList.remove('fa-play-circle');
+         masterPlay.classList.add('fa-pause-circle');
+         gif.style.opacity = 1;
+         document.querySelector("#song-playing").innerText = songs[songIndex].songName;
+         //change background
+       
+         container.style.transition = 'background 1s ease-in';
+         container.style.background = 'linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(NCS-gif.gif)';
+         container.style.backgroundPosition= 'center';
+         container.style.backgroundSize = 'cover';
+         container.style.backgroundRepeat = 'no-repeat';
+    }
+   else{
+         audioElement.pause();
+         masterPlay.classList.remove("fa-pause-circle");
+         masterPlay.classList.add("fa-play-circle");
+         gif.style.opacity = 0;
+         container.style.transition = 'background 1s ease-in';
+         container.style.background = 'linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(onrepeat-background.png)';
+         container.style.backgroundPosition= 'center';
+         container.style.backgroundSize = 'cover';
+         container.style.backgroundRepeat = 'no-repeat';
+         makeAllPlays();
+        }
+})
+
+audioElement.addEventListener('timeupdate', function(){
+    console.log('timeupdate');
+    let progress = parseInt((audioElement.currentTime/audioElement.duration)*100);
+    progress_bar.value = progress;
+})
+
+progress_bar.addEventListener('change',function(){
+    audioElement.currentTime = (progress_bar.value * audioElement.duration)/100;
+})
+
+const makeAllPlays = function(){
+    Array.from(document.querySelectorAll('.song-item-play')).forEach(element => {
+        element.classList.remove('fa-pause-circle');
+        element.classList.add('fa-play-circle');
+    });
+    container.style.transition = 'background 1s ease-in';
+        container.style.background = 'linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(onrepeat-background.png)';
+        container.style.backgroundPosition= 'center';
+        container.style.backgroundSize = 'cover';
+         container.style.backgroundRepeat = 'no-repeat';
+}
+
+songItems.forEach(element => {
+    element.addEventListener('click', (e)=>{
+        let id = Number(e.target.id);
+        songIndex = id - 13;
+        console.log(songIndex);
+        // console.log('click2')
+        makeAllPlays();
+        element.classList.add('fa-pause-circle');
+        element.classList.remove('fa-play-circle');
+        audioElement.src = `song${id}.mp3`;
+        audioElement.currentTime = 0;
+        audioElement.play();
+        document.querySelector("#song-playing").innerText = songs[songIndex].songName;
+         masterPlay.classList.remove("fa-play-circle");
+         masterPlay.classList.add("fa-pause-circle");
+         gif.style.opacity = 1;
+         //change background
+         container.style.transition = 'background 1s ease-in';
+         container.style.background = 'linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(NCS-gif.gif)';
+         container.style.backgroundPosition= 'center';
+         container.style.backgroundSize = 'cover';
+         container.style.backgroundRepeat = 'no-repeat';
+    }
+    )
+});
+
+next.addEventListener('click', function(){
+    if(songIndex >= 5) songIndex = 0;  
+    else songIndex += 1;
+    audioElement.src = `song${songIndex+13}.mp3`;
+    audioElement.currentTime = 0;
+    audioElement.play();
+    document.querySelector("#song-playing").innerText =
+      songs[songIndex ].songName;
+    masterPlay.classList.remove("fa-play-circle");
+    masterPlay.classList.add("fa-pause-circle");
+    gif.style.opacity = 1;
+});
+
+prev.addEventListener("click", function () {
+  if (songIndex <= 0) songIndex = 5;
+  else songIndex -= 1;
+  audioElement.src = `song${songIndex+13}.mp3`;
+  audioElement.currentTime = 0;
+  audioElement.play();
+  document.querySelector("#song-playing").innerText =
+    songs[songIndex].songName;
+  masterPlay.classList.remove("fa-play-circle");
+  masterPlay.classList.add("fa-pause-circle");
+  gif.style.opacity = 1;
+});
+
+//pause on spacebar
+ document.addEventListener("keydown", function (e) {
+   console.log(e);
+   if (e.code === "Space") {
+      console.log('click')
+    if(audioElement.paused || audioElement.currentTime <= 0){
+        // let id = Number(element.target.id);
+         audioElement.play();
+         masterPlay.classList.remove('fa-play-circle');
+         masterPlay.classList.add('fa-pause-circle');
+         gif.style.opacity = 1;
+          container.style.transition = "background 1s ease-in";
+          container.style.background = "linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(NCS-gif.gif)";
+          container.style.backgroundPosition = "center";
+          container.style.backgroundSize = "cover";
+          container.style.backgroundRepeat = "no-repeat";
+   }else{
+    audioElement.pause();
+         masterPlay.classList.remove("fa-pause-circle");
+         masterPlay.classList.add("fa-play-circle");
+         gif.style.opacity = 0;
+          container.style.transition = "background 1s ease-in";
+          container.style.background = "linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(onrepeat-background.png)";
+          container.style.backgroundPosition = "center";
+          container.style.backgroundSize = "cover";
+          container.style.backgroundRepeat = "no-repeat";
+          gif.style.opacity = '0'
+        //  makeAllPlays();
+   }
+ }});
+
+ //make song download
+ document.addEventListener('keydown', function(event) {
+            if (event.ctrlKey && event.key === 'd') {
+                event.preventDefault(); // Prevent default browser behavior
+
+                // Create a temporary link element
+                const link = document.createElement('a');
+                link.href = audioElement.src;
+                link.download = songs[songIndex].songName + '.mp3';
+
+                // Append the link element to the document
+                document.body.appendChild(link);
+
+                // Simulate a click on the link element
+                link.click();
+
+                // Remove the link element from the document
+                document.body.removeChild(link);
+            }
+        });
+</script>
+    <script src="https://kit.fontawesome.com/8276e76662.js" crossorigin="anonymous"></script>
+</body>
+</html>
